@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlin.mad.R
-import com.kotlin.mad.models.BillModel
+import com.kotlin.mad.models.InquiryModel
 
-class BillAdapter(private val billList: ArrayList<BillModel>) :
-    RecyclerView.Adapter<BillAdapter.ViewHolder>() {
+class InquiryAdapter(private val billList: ArrayList<InquiryModel>) :
+    RecyclerView.Adapter<InquiryAdapter.ViewHolder>() {
 
     private lateinit var mListener: onItemClickListener
 
@@ -22,7 +22,7 @@ class BillAdapter(private val billList: ArrayList<BillModel>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.bill_list_item, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.inquiry_list_item, parent, false)
         return ViewHolder(itemView, mListener)
     }
 

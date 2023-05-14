@@ -9,10 +9,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e635d1d-3178-4571-8663-79431ad78227" name="Changes" comment="fix:front end values">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4e635d1d-3178-4571-8663-79431ad78227" name="Changes" comment="fix:contact number 10">
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/activities/BillDetailsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/activities/InquiryDetailsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/activities/BillFetchingActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/activities/InquiryFetchingActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/activities/BillInsertionActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/activities/InquiryInsertionActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/activities/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/adapters/BillAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/adapters/InquiryAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/models/BillModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/kotlin/mad/models/InquiryModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_bill_details.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_inquiry_details.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_fetching.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_fetching.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_insertion.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_insertion.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/update_dialog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/update_dialog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bill_list_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/inquiry_list_item.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +148,21 @@
       <option name="project" value="LOCAL" />
       <updated>1684083587450</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fix:front end validation">
+      <created>1684083818687</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1684083818687</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix:contact number 10">
+      <created>1684083987961</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1684083987961</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +178,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix:front end values" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix:front end values" />
+    <MESSAGE value="fix:front end validation" />
+    <MESSAGE value="fix:contact number 10" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix:contact number 10" />
   </component>
 </project>

@@ -9,10 +9,10 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.kotlin.mad.R
-import com.kotlin.mad.models.BillModel
+import com.kotlin.mad.models.InquiryModel
 import com.google.firebase.database.FirebaseDatabase
 
-class BillDetailsActivity : AppCompatActivity() {
+class InquiryDetailsActivity : AppCompatActivity() {
 
     private lateinit var tvCId: TextView
     private lateinit var tvCName: TextView
@@ -26,7 +26,7 @@ class BillDetailsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bill_details)
+        setContentView(R.layout.activity_inquiry_details)
 
         initView()
         setValuesToViews()
@@ -55,7 +55,7 @@ class BillDetailsActivity : AppCompatActivity() {
         mTask.addOnSuccessListener {
             Toast.makeText(this, " data deleted", Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this, BillFetchingActivity::class.java)
+            val intent = Intent(this, InquiryFetchingActivity::class.java)
             finish()
             startActivity(intent)
         }.addOnFailureListener{ error ->
@@ -149,7 +149,7 @@ class BillDetailsActivity : AppCompatActivity() {
         inquiry: String
     ){
         val dbRef = FirebaseDatabase.getInstance().getReference("InquiryDB").child(id)
-        val inquiryInfo = BillModel(id, name, number, type, inquiry)
+        val inquiryInfo = InquiryModel(id, name, number, type, inquiry)
         dbRef.setValue(inquiryInfo)
     }
 }

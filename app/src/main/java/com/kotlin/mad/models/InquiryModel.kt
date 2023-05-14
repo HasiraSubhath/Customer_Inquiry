@@ -1,6 +1,6 @@
 package com.kotlin.mad.models
 
-data class BillModel(
+data class InquiryModel(
     var cId: String? = null,
     var cName: String? = null,
     var cNumber: String? = null,

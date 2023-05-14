@@ -12,13 +12,13 @@
         android:theme="@style/Theme.Kotlin_bill"
         tools:targetApi="31">
         <activity
-            android:name=".activities.BillDetailsActivity"
+            android:name=".activities.InquiryDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.BillFetchingActivity"
+            android:name=".activities.InquiryFetchingActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.BillInsertionActivity"
+            android:name=".activities.InquiryInsertionActivity"
             android:exported="false" />
         <activity
             android:name=".activities.MainActivity"

@@ -5,12 +5,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.kotlin.mad.models.BillModel
+import com.kotlin.mad.models.InquiryModel
 import com.kotlin.mad.R
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 
-class BillInsertionActivity : AppCompatActivity() {
+class InquiryInsertionActivity : AppCompatActivity() {
 
     //initializing variables
 
@@ -70,7 +70,7 @@ class BillInsertionActivity : AppCompatActivity() {
             //genrate unique ID
             val cId = dbRef.push().key!!
 
-            val bill = BillModel(cId, cName, cNumber, cType, cInquiry)
+            val bill = InquiryModel(cId, cName, cNumber, cType, cInquiry)
 
             dbRef.child(cId).setValue(bill)
                 .addOnCompleteListener {
