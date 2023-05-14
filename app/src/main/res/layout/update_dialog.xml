@@ -6,24 +6,24 @@
     android:padding="10dp">
 
     <EditText
-        android:id="@+id/etBillType"
+        android:id="@+id/etCName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Bill Type"
+        android:hint="C Name"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etBillAmount"
+        android:id="@+id/etCNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Bill Amount"
+        android:hint="C Number"
         android:inputType="number"/>
 
     <EditText
-        android:id="@+id/etBillNotes"
+        android:id="@+id/etCType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -32,12 +32,12 @@
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etBillDate"
+        android:id="@+id/etCInquiry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Bill Date"
+        android:hint="C Inquiry"
         android:maxLength="10"
         android:inputType="date"
 

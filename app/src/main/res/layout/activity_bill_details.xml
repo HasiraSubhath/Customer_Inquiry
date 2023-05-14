@@ -91,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Bill Id"
+                    android:text="CI d"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -103,7 +103,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvBillId"
+                    android:id="@+id/tvCId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -140,7 +140,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Bill Type"
+                    android:text="C Name"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -152,7 +152,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvBillType"
+                    android:id="@+id/tvCName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -190,7 +190,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Bill Amount"
+                    android:text="C Number"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -205,7 +205,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvBillAmount"
+                    android:id="@+id/tvCNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -245,7 +245,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Bill Notes"
+                    android:text="C Type"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -260,7 +260,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvBillNotes"
+                    android:id="@+id/tvCType"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -299,7 +299,7 @@
                     android:layout_gravity="center"
 
                     android:gravity="center"
-                    android:text="Bill Date"
+                    android:text="C Inquiry"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -314,7 +314,7 @@
                 android:layout_weight="1.4">
 
                 <TextView
-                    android:id="@+id/tvBillDate"
+                    android:id="@+id/tvCInquiry"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"

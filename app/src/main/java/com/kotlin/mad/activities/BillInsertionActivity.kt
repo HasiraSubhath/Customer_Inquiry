@@ -14,10 +14,10 @@ class BillInsertionActivity : AppCompatActivity() {
 
     //initializing variables
 
-    private lateinit var etBillType: EditText
-    private lateinit var etBillAmount: EditText
-    private lateinit var etBillNotes: EditText
-    private lateinit var etBillDate: EditText
+    private lateinit var etCName: EditText
+    private lateinit var etCNumber: EditText
+    private lateinit var etCType: EditText
+    private lateinit var etCInquiry: EditText
     private lateinit var btnSaveData: Button
 
     private lateinit var dbRef: DatabaseReference
@@ -27,13 +27,13 @@ class BillInsertionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_insertion)
 
-        etBillType = findViewById(R.id.etBillType)
-        etBillAmount = findViewById(R.id.etBillAmount)
-        etBillNotes = findViewById(R.id.etBillNotes)
-        etBillDate = findViewById(R.id.etBillDate)
+        etCName = findViewById(R.id.etCName)
+        etCNumber = findViewById(R.id.etCNumber)
+        etCType = findViewById(R.id.etCType)
+        etCInquiry = findViewById(R.id.etCInquiry)
         btnSaveData = findViewById(R.id.btnSave)
 
-        dbRef = FirebaseDatabase.getInstance().getReference("BillsDB")
+        dbRef = FirebaseDatabase.getInstance().getReference("InquiryDB")
 
         btnSaveData.setOnClickListener {
             saveBillData()
@@ -44,43 +44,43 @@ class BillInsertionActivity : AppCompatActivity() {
     private fun saveBillData() {
 
         //Geting Values
-        val billType = etBillType.text.toString()
-        val billAmount = etBillAmount.text.toString()
-        val billNotes = etBillNotes.text.toString()
-        val billDate = etBillDate.text.toString()
+        val cName = etCName.text.toString()
+        val cNumber = etCNumber.text.toString()
+        val cType = etCType.text.toString()
+        val cInquiry = etCInquiry.text.toString()
 
         //validation
-        if (billType.isEmpty() || billAmount.isEmpty() || billNotes.isEmpty() || billDate.isEmpty()) {
+        if (cName.isEmpty() || cNumber.isEmpty() || cType.isEmpty() || cInquiry.isEmpty()) {
 
-            if (billType.isEmpty()) {
-                etBillType.error = "Please enter Bill Type"
+            if (cName.isEmpty()) {
+                etCName.error = "Please enter C Name"
             }
-            if (billAmount.isEmpty()) {
-                etBillAmount.error = "Please Bill Amount"
+            if (cNumber.isEmpty()) {
+                etCNumber.error = "Please C Number"
             }
-            if (billNotes.isEmpty()) {
-                etBillNotes.error = "Please Bill Note"
+            if (cType.isEmpty()) {
+                etCType.error = "Please Bill Note"
             }
-            if (billDate.isEmpty()) {
-                etBillDate.error = "Please Bill Date"
+            if (cInquiry.isEmpty()) {
+                etCInquiry.error = "Please C Inquiry"
             }
             Toast.makeText(this, "please check Some areas are not filled", Toast.LENGTH_LONG).show()
         } else {
 
             //genrate unique ID
-            val billId = dbRef.push().key!!
+            val cId = dbRef.push().key!!
 
-            val bill = BillModel(billId, billType, billAmount, billNotes, billDate)
+            val bill = BillModel(cId, cName, cNumber, cType, cInquiry)
 
-            dbRef.child(billId).setValue(bill)
+            dbRef.child(cId).setValue(bill)
                 .addOnCompleteListener {
                     Toast.makeText(this, "All data insert successfully", Toast.LENGTH_SHORT).show()
 
                     //clear data after insert
-                    etBillType.text.clear()
-                    etBillAmount.text.clear()
-                    etBillNotes.text.clear()
-                    etBillDate.text.clear()
+                    etCName.text.clear()
+                    etCNumber.text.clear()
+                    etCType.text.clear()
+                    etCInquiry.text.clear()
 
 
                 }.addOnFailureListener { err ->

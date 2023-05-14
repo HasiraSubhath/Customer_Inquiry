@@ -1,10 +1,10 @@
 package com.kotlin.mad.models
 
 data class BillModel(
-    var billId: String? = null,
-    var billType: String? = null,
-    var billAmount: String? = null,
-    var billNotes: String? = null,
-    var billDate: String? = null
+    var cId: String? = null,
+    var cName: String? = null,
+    var cNumber: String? = null,
+    var cType: String? = null,
+    var cInquiry: String? = null
 
 )

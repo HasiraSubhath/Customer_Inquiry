@@ -28,7 +28,7 @@ class BillAdapter(private val billList: ArrayList<BillModel>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentEmp = billList[position]
-        holder.tvBillType.text = currentEmp.billType
+        holder.tvCName.text = currentEmp.cName
     }
 
     override fun getItemCount(): Int {
@@ -37,7 +37,7 @@ class BillAdapter(private val billList: ArrayList<BillModel>) :
 
     class ViewHolder(itemView: View, clickListener: onItemClickListener) : RecyclerView.ViewHolder(itemView) {
 
-        val tvBillType : TextView = itemView.findViewById(R.id.tvBillType)
+        val tvCName : TextView = itemView.findViewById(R.id.tvCName)
 
         init {
             itemView.setOnClickListener {

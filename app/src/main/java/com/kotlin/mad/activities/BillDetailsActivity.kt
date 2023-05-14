@@ -14,11 +14,11 @@ import com.google.firebase.database.FirebaseDatabase
 
 class BillDetailsActivity : AppCompatActivity() {
 
-    private lateinit var tvBillId: TextView
-    private lateinit var tvBillType: TextView
-    private lateinit var tvBillAmount: TextView
-    private lateinit var tvBillNotes: TextView
-    private lateinit var tvBillDate: TextView
+    private lateinit var tvCId: TextView
+    private lateinit var tvCName: TextView
+    private lateinit var tvCNumber: TextView
+    private lateinit var tvCType: TextView
+    private lateinit var tvCInquiry: TextView
 
     private lateinit var btnUpdate: Button
     private lateinit var btnDelete: Button
@@ -33,14 +33,14 @@ class BillDetailsActivity : AppCompatActivity() {
 
         btnUpdate.setOnClickListener {
             openUpdateDialog(
-                intent.getStringExtra("billId").toString(),
-                intent.getStringExtra("billType").toString()
+                intent.getStringExtra("cId").toString(),
+                intent.getStringExtra("cName").toString()
             )
         }
 
         btnDelete.setOnClickListener {
             deleteRecord(
-                intent.getStringExtra("billId").toString()
+                intent.getStringExtra("cId").toString()
             )
         }
 
@@ -49,7 +49,7 @@ class BillDetailsActivity : AppCompatActivity() {
     private fun deleteRecord(
         id: String
     ){
-        val dbRef = FirebaseDatabase.getInstance().getReference("BillsDB").child(id)
+        val dbRef = FirebaseDatabase.getInstance().getReference("InquiryDB").child(id)
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
@@ -68,11 +68,11 @@ class BillDetailsActivity : AppCompatActivity() {
 
 
     private fun initView() {
-        tvBillId = findViewById(R.id.tvBillId)
-        tvBillType = findViewById(R.id.tvBillType)
-        tvBillAmount = findViewById(R.id.tvBillAmount)
-        tvBillNotes = findViewById(R.id.tvBillNotes)
-        tvBillDate = findViewById(R.id.tvBillDate)
+        tvCId = findViewById(R.id.tvCId)
+        tvCName = findViewById(R.id.tvCName)
+        tvCNumber = findViewById(R.id.tvCNumber)
+        tvCType = findViewById(R.id.tvCType)
+        tvCInquiry = findViewById(R.id.tvCInquiry)
 
         btnUpdate = findViewById(R.id.btnUpdate)
         btnDelete = findViewById(R.id.btnDelete)
@@ -80,17 +80,17 @@ class BillDetailsActivity : AppCompatActivity() {
 
     private fun setValuesToViews() {
         //passing data
-        tvBillId.text = intent.getStringExtra("billId")
-        tvBillType.text = intent.getStringExtra("billType")
-        tvBillAmount.text = intent.getStringExtra("billAmount")
-        tvBillNotes.text = intent.getStringExtra("billNotes")
-        tvBillDate.text = intent.getStringExtra("billDate")
+        tvCId.text = intent.getStringExtra("cId")
+        tvCName.text = intent.getStringExtra("cName")
+        tvCNumber.text = intent.getStringExtra("cNumber")
+        tvCType.text = intent.getStringExtra("cType")
+        tvCInquiry.text = intent.getStringExtra("cInquiry")
 
     }
 
     private fun openUpdateDialog(
-        billId: String,
-        billType: String
+        cId: String,
+        cName: String
 
     ) {
         val mDialog = AlertDialog.Builder(this)
@@ -99,41 +99,41 @@ class BillDetailsActivity : AppCompatActivity() {
 
         mDialog.setView(mDialogView)
 
-        val etBillType = mDialogView.findViewById<EditText>(R.id.etBillType)
-        val etBillAmount = mDialogView.findViewById<EditText>(R.id.etBillAmount)
-        val etBillNotes = mDialogView.findViewById<EditText>(R.id.etBillNotes)
-        val etBillDate = mDialogView.findViewById<EditText>(R.id.etBillDate)
+        val etCName = mDialogView.findViewById<EditText>(R.id.etCName)
+        val etCNumber = mDialogView.findViewById<EditText>(R.id.etCNumber)
+        val etCType = mDialogView.findViewById<EditText>(R.id.etCType)
+        val etCInquiry = mDialogView.findViewById<EditText>(R.id.etCInquiry)
 
         val btnUpdateData = mDialogView.findViewById<Button>(R.id.btnUpdateData)
 
         //update
-        etBillType.setText(intent.getStringExtra("billType").toString())
-        etBillAmount.setText(intent.getStringExtra("billAmount").toString())
-        etBillNotes.setText(intent.getStringExtra("billNotes").toString())
-        etBillDate.setText(intent.getStringExtra("billDate").toString())
+        etCName.setText(intent.getStringExtra("cName").toString())
+        etCNumber.setText(intent.getStringExtra("cNumber").toString())
+        etCType.setText(intent.getStringExtra("cType").toString())
+        etCInquiry.setText(intent.getStringExtra("cInquiry").toString())
 
-        mDialog.setTitle("Updating $billType Record")
+        mDialog.setTitle("Updating $cName Record")
 
         val alertDialog = mDialog.create()
         alertDialog.show()
 
         btnUpdateData.setOnClickListener {
             updateBillData(
-                billId,
-                etBillType.text.toString(),
-                etBillAmount.text.toString(),
-                etBillNotes.text.toString(),
-                etBillDate.text.toString()
+                cId,
+                etCName.text.toString(),
+                etCNumber.text.toString(),
+                etCType.text.toString(),
+                etCInquiry.text.toString()
 
             )
 
             Toast.makeText(applicationContext, "Bill Data Updated", Toast.LENGTH_LONG).show()
 
             //we are setting updated data to our textviews
-            tvBillType.text = etBillType.text.toString()
-            tvBillAmount.text = etBillAmount.text.toString()
-            tvBillNotes.text = etBillNotes.text.toString()
-            tvBillDate.text = etBillDate.text.toString()
+            tvCName.text = etCName.text.toString()
+            tvCNumber.text = etCNumber.text.toString()
+            tvCType.text = etCType.text.toString()
+            tvCInquiry.text = etCInquiry.text.toString()
 
             alertDialog.dismiss()
 
@@ -148,7 +148,7 @@ class BillDetailsActivity : AppCompatActivity() {
         note: String,
         date: String
     ){
-        val dbRef = FirebaseDatabase.getInstance().getReference("BillsDB").child(id)
+        val dbRef = FirebaseDatabase.getInstance().getReference("InquiryDB").child(id)
         val billInfo = BillModel(id, type, amount, note, date)
         dbRef.setValue(billInfo)
     }
