@@ -129,7 +129,7 @@ class InquiryDetailsActivity : AppCompatActivity() {
 
             Toast.makeText(applicationContext, " Data Updated", Toast.LENGTH_LONG).show()
 
-            //we are setting updated data to our textviews
+            //we are setting updated data to our text views
             tvCName.text = etCName.text.toString()
             tvCNumber.text = etCNumber.text.toString()
             tvCType.text = etCType.text.toString()
