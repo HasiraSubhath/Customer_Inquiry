@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
-        android:backgroundTint="@color/blue"
+        android:backgroundTint="@color/Darkgreen"
         android:text="Update"
         android:fontFamily="@font/tomorrow_medium"
         app:layout_constraintEnd_toStartOf="@+id/btnDelete"
@@ -138,7 +138,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/table">
+                android:background="@color/Darkgreen">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -189,7 +189,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/table">
+                android:background="@color/Darkgreen">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -244,7 +244,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/table">
+                android:background="@color/Darkgreen">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -298,7 +298,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.6"
-                android:background="@color/table">
+                android:background="@color/Darkgreen">
 
                 <TextView
                     android:layout_width="match_parent"
