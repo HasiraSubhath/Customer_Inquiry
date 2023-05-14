@@ -38,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etBillType"
+        android:id="@+id/etCName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
@@ -52,7 +52,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/etBillAmount"
+        android:id="@+id/etCNumber"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
@@ -63,10 +63,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBillType" />
+        app:layout_constraintTop_toBottomOf="@+id/etCName" />
 
     <EditText
-        android:id="@+id/etBillNotes"
+        android:id="@+id/etCType"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
@@ -77,10 +77,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBillAmount" />
+        app:layout_constraintTop_toBottomOf="@+id/etCNumber" />
 
     <EditText
-        android:id="@+id/etBillDate"
+        android:id="@+id/etCInquiry"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
@@ -93,7 +93,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBillNotes" />
+        app:layout_constraintTop_toBottomOf="@+id/etCType" />
 
     <Button
         android:id="@+id/btnSave"
@@ -105,6 +105,6 @@
         android:text="Add Bill"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etBillDate" />
+        app:layout_constraintTop_toBottomOf="@+id/etCInquiry" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
