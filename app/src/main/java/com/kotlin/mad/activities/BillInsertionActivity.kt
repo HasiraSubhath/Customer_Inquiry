@@ -36,12 +36,12 @@ class BillInsertionActivity : AppCompatActivity() {
         dbRef = FirebaseDatabase.getInstance().getReference("InquiryDB")
 
         btnSaveData.setOnClickListener {
-            saveBillData()
+            saveInquiryData()
         }
 
     }
 
-    private fun saveBillData() {
+    private fun saveInquiryData() {
 
         //Geting Values
         val cName = etCName.text.toString()
@@ -53,16 +53,16 @@ class BillInsertionActivity : AppCompatActivity() {
         if (cName.isEmpty() || cNumber.isEmpty() || cType.isEmpty() || cInquiry.isEmpty()) {
 
             if (cName.isEmpty()) {
-                etCName.error = "Please enter C Name"
+                etCName.error = "Please enter Customer Name"
             }
             if (cNumber.isEmpty()) {
-                etCNumber.error = "Please C Number"
+                etCNumber.error = "Please Customer Number"
             }
             if (cType.isEmpty()) {
-                etCType.error = "Please Bill Note"
+                etCType.error = "Please Inquiry Type"
             }
             if (cInquiry.isEmpty()) {
-                etCInquiry.error = "Please C Inquiry"
+                etCInquiry.error = "Please Inquiry Description"
             }
             Toast.makeText(this, "please check Some areas are not filled", Toast.LENGTH_LONG).show()
         } else {

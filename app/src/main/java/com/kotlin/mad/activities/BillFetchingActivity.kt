@@ -31,12 +31,12 @@ class BillFetchingActivity : AppCompatActivity() {
 
         billList = arrayListOf<BillModel>()
 
-        getBillData()
+        getInquiryData()
 
 
     }
 
-    private fun getBillData() {
+    private fun getInquiryData() {
 
         empRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE

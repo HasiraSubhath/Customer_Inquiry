@@ -53,7 +53,7 @@ class BillDetailsActivity : AppCompatActivity() {
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
-            Toast.makeText(this, "Bill data deleted", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, " data deleted", Toast.LENGTH_LONG).show()
 
             val intent = Intent(this, BillFetchingActivity::class.java)
             finish()
@@ -118,7 +118,7 @@ class BillDetailsActivity : AppCompatActivity() {
         alertDialog.show()
 
         btnUpdateData.setOnClickListener {
-            updateBillData(
+            updateInquiryData(
                 cId,
                 etCName.text.toString(),
                 etCNumber.text.toString(),
@@ -127,7 +127,7 @@ class BillDetailsActivity : AppCompatActivity() {
 
             )
 
-            Toast.makeText(applicationContext, "Bill Data Updated", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, " Data Updated", Toast.LENGTH_LONG).show()
 
             //we are setting updated data to our textviews
             tvCName.text = etCName.text.toString()
@@ -141,15 +141,15 @@ class BillDetailsActivity : AppCompatActivity() {
 
     }
 
-    private fun updateBillData(
+    private fun updateInquiryData(
         id: String,
+        name: String,
+        number: String,
         type: String,
-        amount: String,
-        note: String,
-        date: String
+        inquiry: String
     ){
         val dbRef = FirebaseDatabase.getInstance().getReference("InquiryDB").child(id)
-        val billInfo = BillModel(id, type, amount, note, date)
-        dbRef.setValue(billInfo)
+        val inquiryInfo = BillModel(id, name, number, type, inquiry)
+        dbRef.setValue(inquiryInfo)
     }
 }
