@@ -9,15 +9,14 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="667dp"
-        android:layout_height="234dp"
+        android:layout_width="475dp"
+        android:layout_height="639dp"
+        android:layout_marginBottom="264dp"
+        android:src="@drawable/iq"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.539"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/top_login" />
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
@@ -33,6 +32,7 @@
         android:textColor="@color/black"
         android:textSize="26sp"
         android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -103,7 +103,7 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/tomorrow_medium"
-        android:text="Add Bill"
+        android:text="Submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etCInquiry" />
