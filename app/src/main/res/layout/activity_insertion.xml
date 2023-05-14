@@ -5,15 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".activities.BillInsertionActivity"
-    >
+    tools:context=".activities.BillInsertionActivity">
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="667dp"
         android:layout_height="234dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.539"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/top_login" />
 
     <TextView
@@ -23,7 +26,10 @@
         android:layout_marginStart="52dp"
         android:layout_marginTop="175dp"
         android:layout_marginEnd="52dp"
-        android:text="Add New Bill"
+        android:fontFamily="@font/tomorrow_medium"
+        android:gravity="center"
+        android:text="Add Inquiry"
+        android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="26sp"
         android:textStyle="bold"
@@ -32,12 +38,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/etCName"
+        android:id="@+id/etBillType"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="65dp"
         android:ems="10"
-        android:hint="Enter C Name"
+        android:fontFamily="@font/tomorrow_medium"
+        android:hint="Enter Your Name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -45,45 +52,48 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/etCNumber"
+        android:id="@+id/etBillAmount"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
         android:ems="10"
-        android:hint="Enter C Number"
+        android:fontFamily="@font/tomorrow_medium"
+        android:hint="Enter Your Contact Number"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCName" />
+        app:layout_constraintTop_toBottomOf="@+id/etBillType" />
 
     <EditText
-        android:id="@+id/etCType"
+        android:id="@+id/etBillNotes"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
         android:ems="10"
-        android:hint="Enter Bill Note"
+        android:fontFamily="@font/tomorrow_medium"
+        android:hint="Mention Your Inquiry Type"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/etBillAmount" />
 
     <EditText
-        android:id="@+id/etCInquiry"
+        android:id="@+id/etBillDate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
         android:layout_marginBottom="11dp"
         android:ems="10"
-        android:hint="Enter C Inquiry"
+        android:fontFamily="@font/tomorrow_medium"
+        android:hint="Description"
         android:inputType="date"
         app:layout_constraintBottom_toTopOf="@+id/btnSave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCType" />
+        app:layout_constraintTop_toBottomOf="@+id/etBillNotes" />
 
     <Button
         android:id="@+id/btnSave"
@@ -91,9 +101,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/blue"
+        android:fontFamily="@font/tomorrow_medium"
         android:text="Add Bill"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etCInquiry" />
+        app:layout_constraintTop_toBottomOf="@+id/etBillDate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

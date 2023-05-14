@@ -6,38 +6,42 @@
     android:padding="10dp">
 
     <EditText
-        android:id="@+id/etCName"
+        android:id="@+id/etBillType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="C Name"
+        android:hint="Customer Name"
+        android:fontFamily="@font/tomorrow_medium"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etCNumber"
+        android:id="@+id/etBillAmount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="C Number"
+        android:hint="Customer Contact"
+        android:fontFamily="@font/tomorrow_medium"
         android:inputType="number"/>
 
     <EditText
-        android:id="@+id/etCType"
+        android:id="@+id/etBillNotes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Bill Note"
+        android:hint="Inquiry Type"
+        android:fontFamily="@font/tomorrow_medium"
         android:inputType="textPersonName" />
 
     <EditText
-        android:id="@+id/etCInquiry"
+        android:id="@+id/etBillDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="C Inquiry"
+        android:hint="Description"
+        android:fontFamily="@font/tomorrow_medium"
         android:maxLength="10"
         android:inputType="date"
 
@@ -50,7 +54,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/blue"
-        android:text="Update Data" />
+        android:text="Update Inquiry"
+        android:fontFamily="@font/tomorrow_medium"
+        />
 
 
 </LinearLayout>
