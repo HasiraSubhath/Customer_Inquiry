@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="Bill Type"
+        android:hint="Customer Name"
+        android:fontFamily="@font/tomorrow_medium"
         android:inputType="textPersonName" />
 
     <EditText
@@ -19,7 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Bill Amount"
+        android:hint="Customer Contact"
+        android:fontFamily="@font/tomorrow_medium"
         android:inputType="number"/>
 
     <EditText
@@ -28,7 +30,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Bill Note"
+        android:hint="Inquiry Type"
+        android:fontFamily="@font/tomorrow_medium"
         android:inputType="textPersonName" />
 
     <EditText
@@ -37,7 +40,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:hint="Bill Date"
+        android:hint="Description"
+        android:fontFamily="@font/tomorrow_medium"
         android:maxLength="10"
         android:inputType="date"
 
@@ -50,7 +54,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/blue"
-        android:text="Update Data" />
+        android:text="Update Inquiry"
+        android:fontFamily="@font/tomorrow_medium"
+        />
 
 
 </LinearLayout>

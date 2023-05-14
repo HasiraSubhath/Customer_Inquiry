@@ -24,6 +24,7 @@
         android:layout_marginTop="128dp"
         android:backgroundTint="@color/red"
         android:text="Delete"
+        android:fontFamily="@font/tomorrow_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnUpdate"
@@ -36,6 +37,7 @@
         android:layout_marginTop="128dp"
         android:backgroundTint="@color/blue"
         android:text="Update"
+        android:fontFamily="@font/tomorrow_medium"
         app:layout_constraintEnd_toStartOf="@+id/btnDelete"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +50,10 @@
         android:layout_marginStart="122dp"
         android:layout_marginTop="126dp"
         android:layout_marginEnd="84dp"
-        android:text="Edit Bill Details"
+        android:text="Edit  Details"
+        android:fontFamily="@font/tomorrow_medium"
+        android:gravity="center"
+        android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="26sp"
         android:textStyle="bold"
@@ -140,7 +145,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Bill Type"
+                    android:text="Customer Name"
+                    android:fontFamily="@font/tomorrow_medium"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -190,7 +196,8 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:text="Bill Amount"
+                    android:text="Contact"
+                    android:fontFamily="@font/tomorrow_medium"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -243,9 +250,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-
                     android:gravity="center"
-                    android:text="Bill Notes"
+                    android:text="Type"
+                    android:fontFamily="@font/tomorrow_medium"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
@@ -297,9 +304,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-
                     android:gravity="center"
-                    android:text="Bill Date"
+                    android:text="Description"
+                    android:fontFamily="@font/tomorrow_medium"
                     android:textColor="@color/black"
                     android:textSize="15sp"
 
