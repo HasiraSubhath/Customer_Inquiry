@@ -42,8 +42,8 @@
         android:ems="10"
         android:hint="Description"
         android:fontFamily="@font/tomorrow_medium"
-        android:maxLength="10"
-        android:inputType="date"
+
+        android:inputType="textPersonName"
 
         />
 
